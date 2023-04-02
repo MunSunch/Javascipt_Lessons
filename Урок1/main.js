@@ -49,15 +49,73 @@ function square(n) {
 }
 square(22)
 
-
-
-
-
 //                      Операторы
 // Логические
 let status = true
-if(!status && status) {
+if(!status && status || status) {
     console.log("true")
 } else {
     console.log("false")
 }
+
+
+
+
+
+
+// преобразование типов данных(явные)
+// из других типов в число при помощи стандартной функции
+Number("22")
+
+console.log(Number("\t\t 0b111"))
+console.log(Number("\t\t 0xA"))
+
+// сравнение с NaN дает false всегда
+console.log(NaN == NaN)
+
+// Так как сравнение с NaN всегда дает false, т о используют спец функцию. Проверка на NaN
+let t
+console.log(isNaN(t))
+
+
+// в строку
+let res = String({})
+// res = String(true)
+res = String([1,2,3,4,5])
+console.log(res)
+
+
+
+
+// преобразование типов данных(неявные)
+if("string") {
+    console.log("Строка не пустая")
+} else {
+    console.log("Строка пустая")
+}
+
+if("" && 0 || 12.22) {
+    console.log(true)
+}
+
+// сложение со строкой
+console.log('4' + 2)
+console.log(2 + '2')
+console.log(42 + {})
+
+console.log(typeof(`${1 + 1}`)) // string
+
+if({toString(){return '2'}} == 2) {
+    console.log("Преобразование")
+}
+
+
+// строки
+let text = 'На ёлке ёжики ещё не перевелись'
+let textRes = text.split(' ')
+console.log(textRes)
+
+// массивы
+let array = [1,2,3,4,5]
+array.reverse()
+console.log(array.sort())
