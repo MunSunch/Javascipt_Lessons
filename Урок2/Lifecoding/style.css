@@ -61,9 +61,9 @@ container {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-   
+    border-radius: 10px;   
 }
+
 #form {
     display: inline-block;
     padding: 20px;

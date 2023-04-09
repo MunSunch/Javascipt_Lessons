@@ -10,23 +10,6 @@ let phoneBook = [
         age: 23,
         mobile: 8_987_302_29_23,
         home: 43-23-11
-    },
-    {
-        name: "Ира Кудрявцева",
-        age: 23,
-        mobile: 8_987_302_29_23,
-        home: 43-23-11
-    },
-    {
-        name: "Ира Кудрявцева",
-        age: 23,
-        mobile: 8_987_302_29_23,
-        home: 43-23-11
-    },
-    {
-        name: "Ира Кудрявцева",
-        age: 23,
-        home: 43-23-11
     }
 ];
 
@@ -74,12 +57,15 @@ function createCard(_name, _age, _mobile, _home) {
     if(_home != undefined) {
         ul.append(home)
     } 
+
+    container.append(div)
 }
 
 for (let index = 0; index < phoneBook.length; index++) {
     const element = phoneBook[index];
     createCard(element.name, element.age, element.mobile, element.home)
 }
+
 
 let form = document.getElementById("form")
 form.addEventListener('submit', function(event) {
@@ -90,13 +76,13 @@ form.addEventListener('submit', function(event) {
     let mobile = document.getElementById("mobile")
     let home = document.getElementById("home")
 
-    let newItem = function(_name, _age, _mobile, _home) {
+    function newItem(_name, _age, _mobile, _home) {
         this.name = _name
         this.age = _age
         this.mobile = _mobile
         this.home = _home
     }
-    phoneBook.push(newItem)
-
-    document.querySelector(".form_box").classList.remove("open")
+    phoneBook.push(new newItem(name, age, mobile, home))
+    
+    document.querySelector(".form_box").classList.toggle("open")
 })
