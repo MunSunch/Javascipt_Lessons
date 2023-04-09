@@ -1,0 +1,84 @@
+body {
+    position: relative; 
+    margin:0;
+    padding: 0;
+}
+
+container {
+    width: 70%;
+    min-width: 374px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px silver;
+    padding: 10px 20px;
+    width: 70%;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.name {
+    font-family: sans-serif;
+    color:#4682B4; 
+}
+
+.delete {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    top:10px;
+    right:10px;
+}
+
+.set {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    top:50px;
+    right:10px;
+}
+
+.addContact {
+    color: white;
+    width: 70%;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.form_box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.274);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+   
+}
+#form {
+    display: inline-block;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+.label {
+    font-family: sans-serif;
+    color: #4682B4;
+}
